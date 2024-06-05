@@ -19,7 +19,7 @@ const router = createRouter({
         },
         {
           path: 'game2',
-          name: '游戏2',
+          name: '最长子序列',
           component: () => import('@/views/game2.vue'),
           meta: {
             index: 1

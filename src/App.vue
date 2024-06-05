@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router';
 import {watch, ref, computed} from 'vue'
 
 const idGen = uniqueIdGenerator()
-const _ = ['六度空间']
+const _ = ['六度空间', '最长子序列']
 const navRef = ref()
 const navs = computed(()=>navRef.value.children)
 const navConfig = Array.from({length:5},
