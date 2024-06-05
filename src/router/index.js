@@ -14,7 +14,8 @@ const router = createRouter({
           name: '游戏3',
           component: SortGame,
           meta: {
-            index: 2
+            index: 2,
+            owner: ''
           }
         },
         {
@@ -22,7 +23,8 @@ const router = createRouter({
           name: '最长子序列',
           component: () => import('@/views/game2.vue'),
           meta: {
-            index: 1
+            index: 1,
+            owner: '庄家俊'
           }
         },
         {
@@ -30,7 +32,8 @@ const router = createRouter({
           name: '六度空间',
           component: () => import('@/views/game1.vue'),
           meta: {
-            index: 0
+            index: 0,
+            owner: '江凯龙'
           }
         }
       ]

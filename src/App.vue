@@ -30,6 +30,14 @@ watch(()=>route.path,()=>{
           <img src="/github.svg" class="h-5 w-5 inline hover:cursor-pointer"/>
         </a>
       </h1>
+      <sub class="inline">
+      <span class="text-xs font-semibold text-black">
+        {{ $route.meta.owner }}
+      </span>
+      <span>
+        匠心制作
+      </span>
+    </sub>
     </header>
   <nav ref="navRef" class="flex items-center justify-around rounded-md border-b">
     <button v-for="x in navConfig"
