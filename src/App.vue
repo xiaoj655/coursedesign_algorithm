@@ -26,8 +26,9 @@ watch(()=>route.path,()=>{
     <header class="text-center">
       <h1 class="text-lg">
         算法课设
-        <a href=""></a>
-        <img src="/github.svg" class="h-5 w-5 inline hover:cursor-pointer"/>
+        <a href="https://github.com/xiaoj655/coursedesign_algorithm" target="_blank">
+          <img src="/github.svg" class="h-5 w-5 inline hover:cursor-pointer"/>
+        </a>
       </h1>
     </header>
   <nav ref="navRef" class="flex items-center justify-around rounded-md border-b">
