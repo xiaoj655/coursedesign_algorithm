@@ -3,7 +3,8 @@ import { calLinePercent,getGoodControlPoint, calTangentPoints, randInt } from '@
 import {onMounted, ref} from 'vue'
 import { parse } from 'vue/compiler-sfc';
 
-const ITEM_RADUIS = 25, LENGTH = 6, LINE_WIDTH=2
+const ITEM_RADUIS = 25, LINE_WIDTH=2
+let LENGTH = 6
 const ITEM_COLOR = '#fbbf24', ITEM_HOVER_COLOR = '#d97706', ITEM_SELECTED_COLOR = '#451a03'
 let data, data2
 
@@ -181,7 +182,7 @@ function c(){
   Item.clearAll()
   let flg= false
   Item.itemCollection.push(...Array.from({length: LENGTH}, (v,i)=>{
-    const dis = flg ? (80 + randInt(0,200)) : (270 + randInt(0, 100))
+    const dis = flg ? (80 + randInt(0,200)) : (200 + randInt(0, 100))
     flg = !flg
     const angle = Math.PI*2/LENGTH * i
     const x = new Item(512 + Math.cos(angle)*dis,
@@ -208,12 +209,19 @@ onMounted(()=>{
       <span>
         tip: 现在需要给村庄通水, 可以选择修路或之间在村庄修建水井, 请你找到最小花费的方式
       </span>
+      <br/>
+      <label for="kk">村庄数</label>
+      <input type="range" 
+            id="kk"
+            @change="(e)=>LENGTH=parseInt(e.target.value)"
+            :value="LENGTH"
+            min="3" max="10"/>
       <button @click="c" class="float-right">重置</button>
     </header>
     <svg version="1.1"
       baseProfile="full"
       width="1024"
-      height="800"
+      height="700"
       xmlns="http://www.w3.org/2000/svg"
       ref="svgRef"
     >
