@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import SortGame from '@/views/sort_game.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,12 +9,21 @@ const router = createRouter({
       redirect: '/game1',
       children: [
         {
-          path: 'sort_game',
-          name: '游戏3',
-          component: SortGame,
+          path: 'game4',
+          name: '游戏4',
+          component: ()=>import('@/views/game4.vue'),
+          meta: {
+            index: 3,
+            owner: ''
+          }
+        },
+        {
+          path: 'gmae3',
+          name: '村庄通水',
+          component: ()=>import('@/views/game3.vue'),
           meta: {
             index: 2,
-            owner: ''
+            owner: '林炜源'
           }
         },
         {
