@@ -7,7 +7,7 @@ const idGen = uniqueIdGenerator()
 const _ = ['六度空间', '最长子序列', '村庄通水']
 const navRef = ref()
 const navs = computed(()=>navRef.value.children)
-const navConfig = Array.from({length:5},
+const navConfig = Array.from({length:3},
     (v,i)=>{
       return {
         key: idGen.next().value,
@@ -27,7 +27,7 @@ watch(()=>route.path,()=>{
       <h1 class="text-lg">
         算法课设
         <a href="https://github.com/xiaoj655/coursedesign_algorithm" target="_blank">
-          <img src="/github.svg" class="h-5 w-5 inline hover:cursor-pointer"/>
+          <img src="/github.svg" class="inline w-5 h-5 hover:cursor-pointer"/>
         </a>
       </h1>
       <sub class="inline">
@@ -39,11 +39,11 @@ watch(()=>route.path,()=>{
       </span>
     </sub>
     </header>
-  <nav ref="navRef" class="flex items-center justify-around rounded-md border-b">
+  <nav ref="navRef" class="flex items-center justify-around border-b rounded-md">
     <button v-for="x in navConfig"
       @click="$router.push({name: x.val})"
       :key="x.key"
-      class="px-5 py-2 hover:bg-sky-500 transition-all text-slate-600">
+      class="px-5 py-2 transition-all hover:bg-sky-500 text-slate-600">
       {{ x.val }}
     </button>
   </nav>

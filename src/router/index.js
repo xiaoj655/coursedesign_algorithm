@@ -9,21 +9,12 @@ const router = createRouter({
       redirect: '/game1',
       children: [
         {
-          path: 'game4',
-          name: '游戏4',
-          component: ()=>import('@/views/game4.vue'),
-          meta: {
-            index: 3,
-            owner: ''
-          }
-        },
-        {
           path: 'gmae3',
           name: '村庄通水',
           component: ()=>import('@/views/game3.vue'),
           meta: {
             index: 2,
-            owner: '林炜源'
+            owner: '林炜源, 庄展权, 李关渊'
           }
         },
         {
@@ -32,7 +23,7 @@ const router = createRouter({
           component: () => import('@/views/game2.vue'),
           meta: {
             index: 1,
-            owner: '庄家俊'
+            owner: '庄家俊, 吕顺, 向天成'
           }
         },
         {
@@ -41,7 +32,7 @@ const router = createRouter({
           component: () => import('@/views/game1.vue'),
           meta: {
             index: 0,
-            owner: '江凯龙'
+            owner: '江凯龙, 陈俊龙, 吕嘉盛'
           }
         }
       ]
